@@ -1,0 +1,5 @@
+Margin: din exterior nimeni nu se apropie de acest border
+	-se misca in sensul ceasului
+
+Padding: in interior
+	-sa se vada diferenta de background
