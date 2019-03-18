@@ -57,3 +57,10 @@ function hideAllPages()
     }
 }
 initMenu()
+
+function showSkills(){
+    var skills = ['html','css','js']
+    for( var i=0;i<skills.length;i++)
+        console.warn("#" + (i+1) + " "+ skills[i]);
+}
+showSkills()
