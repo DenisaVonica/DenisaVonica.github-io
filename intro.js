@@ -60,7 +60,12 @@ initMenu()
 
 function showSkills(){
     var skills = ['html','css','js']
-    for( var i=0;i<skills.length;i++)
-        console.warn("#" + (i+1) + " "+ skills[i]);
+    for( var i=0;i<skills.length;i++){
+       printSkill(skills[i],i);
+    }
+    function printSkill(skill,index){
+        console.info("#" + (index+1) + " "+ skill);
+    }
+    
 }
 showSkills()
