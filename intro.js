@@ -59,10 +59,13 @@ function hideAllPages()
 initMenu()
 
 function showSkills(){
-    var skills = ['html','css','js'];
-    console.warn('showSkills',skills);
-    skills.forEach(function(skill,index){
-        console.info("#" + (index+1) + " "+ skill);
+    var skills = ['html','css','javaScript'];
+    var htmlSkills = skills.map(function(skill,index){
+        return '<li>' +skill+ '</li>';
     });
+
+    var ul = document.querySelector('#skills-page ul');
+    console.warn(ul);
+    ul.innerHTML = htmlSkills.join('');
 }
 showSkills()
