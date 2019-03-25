@@ -59,16 +59,20 @@ function hideAllPages()
 initMenu()
 
 function showSkills(){
-    var allEndorcements = [8,12,19,3];
-    var skills = ['html','css','javaScript','nodejs'];
+    var skills=[
+        {name: 'html',endorcements: 8},
+        {name:'css',endorcements: 12},
+        {name:'javaScript',endorcements:20},
+        {name:'nodejs',endorcements:3}
+    ];
 
     var htmlSkills = skills.map(function(skill,index){
-        var endorcements = '<span class="endorcements" > ( ' + allEndorcements[index] +  ")</span> ";
-        return '<li>' +skill.toUpperCase()+  endorcements  + ' </li>';
+        console.warn('cine esti?',skill);
+        var endorcements = '<span class="endorcements" > ( ' + skill.endorcements +  ")</span> ";
+        return '<li>' +skill.name.toUpperCase()+  endorcements  + ' </li>';
     });
 
     var ul = document.querySelector('#skills-page ul');
-    console.warn(ul);
     ul.innerHTML = htmlSkills.join('');
 }
 
