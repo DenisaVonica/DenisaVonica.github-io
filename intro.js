@@ -60,15 +60,21 @@ initMenu()
 
 function showSkills(){
     var skills=[
-        {name: 'html',endorcements: 8},
+        {name: 'html',endorcements: 8,  endorsedBy:'Andrei I'},
         {name:'css',endorcements: 12},
-        {name:'javaScript',endorcements:20},
+        {name:'javaScript',endorcements:20,  endorsedBy:'Vasile I'},
         {name:'nodejs',endorcements:3}
     ];
 
     var htmlSkills = skills.map(function(skill,index){
-        console.warn('cine esti?',skill);
-        var endorcements = '<span class="endorcements" > ( ' + skill.endorcements +  ")</span> ";
+        //console.warn('cine esti?',skill);
+        var endorsedBy = skill.endorsedBy;
+        if(endorsedBy){
+            endorsedBy = '-' + endorsedBy;
+        }else{
+            endorsedBy='';
+        }
+        var endorcements = `<span class="endorcements" >(${skill.endorcements}${ endorsedBy})</span>`;
         return '<li>' +skill.name.toUpperCase()+  endorcements  + ' </li>';
     });
 
