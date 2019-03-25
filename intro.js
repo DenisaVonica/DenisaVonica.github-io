@@ -59,13 +59,19 @@ function hideAllPages()
 initMenu()
 
 function showSkills(){
-    var skills = ['html','css','javaScript'];
+    var allEndorcements = [8,12,19,3];
+    var skills = ['html','css','javaScript','nodejs'];
+
     var htmlSkills = skills.map(function(skill,index){
-        return '<li>' +skill.toUpperCase()+ '</li>';
+        var endorcements = '<span class="endorcements" > ( ' + allEndorcements[index] +  ")</span> ";
+        return '<li>' +skill.toUpperCase()+  endorcements  + ' </li>';
     });
 
     var ul = document.querySelector('#skills-page ul');
     console.warn(ul);
     ul.innerHTML = htmlSkills.join('');
 }
+
+hideAllPages();
+showPage('skills-page');
 showSkills()
