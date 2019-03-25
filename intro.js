@@ -68,12 +68,8 @@ function showSkills(){
 
     var htmlSkills = skills.map(function(skill,index){
         //console.warn('cine esti?',skill);
-        var endorsedBy = skill.endorsedBy;
-        if(endorsedBy){
-            endorsedBy = '-' + endorsedBy;
-        }else{
-            endorsedBy='';
-        }
+        var endorsedBy = skill.endorsedBy ? '-' + skill.endorsedBy : ' ';
+        
         var endorcements = `<span class="endorcements" >(${skill.endorcements}${ endorsedBy})</span>`;
         return '<li>' +skill.name.toUpperCase()+  endorcements  + ' </li>';
     });
