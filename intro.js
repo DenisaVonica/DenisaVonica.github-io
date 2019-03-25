@@ -66,6 +66,10 @@ function showSkills(){
         {name:'nodejs',endorcements:3}
     ];
 
+    skills.sort(function(a,b){
+        return  b.endorcements - a.endorcements;
+    });
+
     var htmlSkills = skills.map(function(skill,index){
         //console.warn('cine esti?',skill);
         var endorsedBy = skill.endorsedBy ? '-' + skill.endorsedBy : ' ';
